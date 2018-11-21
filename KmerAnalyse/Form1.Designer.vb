@@ -25,13 +25,15 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ScriptsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateKAnalyseScriptToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MergeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FilterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScriptsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScriptsToolStripMenuItem, Me.MergeToolStripMenuItem, Me.FilterToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
@@ -50,6 +52,18 @@ Partial Class Form1
         Me.CreateKAnalyseScriptToolStripMenuItem.Name = "CreateKAnalyseScriptToolStripMenuItem"
         Me.CreateKAnalyseScriptToolStripMenuItem.Size = New System.Drawing.Size(233, 26)
         Me.CreateKAnalyseScriptToolStripMenuItem.Text = "Create KAnalyse Script"
+        '
+        'MergeToolStripMenuItem
+        '
+        Me.MergeToolStripMenuItem.Name = "MergeToolStripMenuItem"
+        Me.MergeToolStripMenuItem.Size = New System.Drawing.Size(64, 24)
+        Me.MergeToolStripMenuItem.Text = "Merge"
+        '
+        'FilterToolStripMenuItem
+        '
+        Me.FilterToolStripMenuItem.Name = "FilterToolStripMenuItem"
+        Me.FilterToolStripMenuItem.Size = New System.Drawing.Size(54, 24)
+        Me.FilterToolStripMenuItem.Text = "Filter"
         '
         'Form1
         '
@@ -70,4 +84,6 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ScriptsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreateKAnalyseScriptToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MergeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents FilterToolStripMenuItem As ToolStripMenuItem
 End Class

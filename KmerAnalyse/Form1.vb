@@ -1,4 +1,5 @@
-﻿Imports Szunyi.IO.FilePath_Conversion
+﻿Imports Szunyi.IO
+Imports Szunyi.IO.FilePath_Conversion
 Public Class Form1
     Private Sub CreateKAnalyseScriptToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateKAnalyseScriptToolStripMenuItem.Click
         ' Get Files
@@ -21,5 +22,24 @@ Public Class Form1
             Next
         Next
         Clipboard.SetText(str.ToString)
+    End Sub
+
+    Private Sub MergeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MergeToolStripMenuItem.Click
+        ' Get Files
+        ' Check Same Size
+        ' Do
+        Dim Files = Szunyi.IO.Pick_Up.Files(Szunyi.IO.File_Extensions.KAnalyse).ToList
+        Dim FIle = Szunyi.IO.Export.File_To_Save()
+        Dim x As New KAnalyse(Files, FIle)
+        x.DoIt()
+    End Sub
+
+    Private Sub FilterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterToolStripMenuItem.Click
+        Dim x As New KAnalyseFilterSetting
+        Dim t As New Szunyi.IO.Controls.Set_Console_Properties(x)
+        If t.ShowDialog() <> DialogResult.OK Then Exit Sub
+
+
+
     End Sub
 End Class
