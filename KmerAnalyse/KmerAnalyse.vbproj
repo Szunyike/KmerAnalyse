@@ -97,6 +97,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -115,6 +118,16 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Szunyi.Common\Szunyi.Common\Szunyi.Common.vbproj">
+      <Project>{d2d39939-3eac-4599-bf5b-41228d7e3bbf}</Project>
+      <Name>Szunyi.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Szunyi.IO\Szunyi.IO\Szunyi.IO.vbproj">
+      <Project>{053ecc71-e49d-4254-9a5a-7d36b3f50d37}</Project>
+      <Name>Szunyi.IO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
